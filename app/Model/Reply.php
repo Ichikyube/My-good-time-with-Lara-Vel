@@ -3,6 +3,8 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
+use App\Model\Like;
 
 class Reply extends Model
 {
@@ -14,7 +16,8 @@ class Reply extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function like(){
+    public function like()
+    {
         return $this->hasMany(like::class);
     }
 }
